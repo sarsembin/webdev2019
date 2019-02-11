@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Точки и отступы*/
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none
+}
+
+/* лист */
+ul li {
+  margin: 10px;
+  cursor: pointer;
+  position: relative;
+  padding: 10px 10px 10px 50px;
+  background: rgb(217, 218, 252);
+  font-size: 18px;
+  transition: 0.2s;
+}
+
+
+/* Затемнение ховер */
+ul li:hover {
+  background: #9b9a9a;
+}
+
+/* Отметили, зачеркнули, раскрасили */
+ul li.checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+/* галочка */
+ul li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+/* убрать кнопка */
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 10px 16px 10px 16px;
+}
+
+.close:hover {
+  background-color: #9b9a9a;
+  color: white;
+}
+
+/* хедер */
+.header {
+  background-color: #5f9fff;
+  padding: 30px 40px;
+  color: rgb(255, 255, 255);
+  text-align: left;
+}
+
+/* снизу хедера */
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* строка */
+input {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+
+/* добавить кнопка */
+.addBtn {
+  padding: 10px;
+  width: 25%;
+  background: #d9d9d9;
+  color: rgb(0, 0, 0);
+  float: right;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+}
+
+.addBtn:hover {
+  background-color: #9b9a9a;
+}
