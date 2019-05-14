@@ -1,0 +1,13 @@
+<ng-container *ngIf="!loading">
+  Loading...
+</ng-container>
+<ng-container *ngIf="loading">
+  <div>
+    <div *ngFor="let c of categories" (click)="getProducts(c)" >{{c.id}} - {{c.name}}</div>
+  </div>
+</ng-container>
+
+-----------------------------
+<div>
+  <div *ngFor="let p of products">{{p.id}} - {{p.name}} - {{p.price}} - {{p.count}}</div>
+</div>

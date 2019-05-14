@@ -1,0 +1,19 @@
+<ng-container *ngIf="!islogged">
+  <div>
+    <div>
+      <input type="text" placeholder="Login" [(ngModel)]="login"/>
+    </div>
+    <div>
+      <input type="password" placeholder="Password" [(ngModel)]="password"/>
+    </div>
+    <div>
+      <button (click)="auth()">Log in</button>
+    </div>
+  </div>
+</ng-container>
+<ng-container *ngIf="islogged">
+  <div>
+    <div *ngFor="let c of categories" ><a  (click)="getProducts(c)">{{c.id}} - {{c.name}}</a></div>
+    <div *ngFor="let p of products" >{{p.id}} - {{p.name}} - {{p.status}}</div>
+  </div>
+</ng-container>
